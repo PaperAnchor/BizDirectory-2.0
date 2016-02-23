@@ -1,0 +1,19 @@
+<%= form_for @category do |f| %>
+    <% if @category.errors.any? %>
+        <h2><%= pluralize(@category.errors.count, "error") %> prevented this Category from saving:</h2>
+        <ul>
+            <% @category.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    <% end %>
+
+    <%= f.label :name, "Category" %><br>
+    <%= f.text_field :name %>
+
+    <br>
+    <br>
+
+    <%= f.submit %>
+
+<% end %>

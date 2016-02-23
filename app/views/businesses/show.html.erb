@@ -1,0 +1,17 @@
+<%= @business.name %><br>
+<%= @business.address %><br>
+<%= @business.city %><br>
+<%= @business.postal %><br>
+<%= @business.email %><br>
+<%= @business.phone %><br>
+<%= @business.url %><br>
+<%= @business.description %><br>
+<%= @business.category %><br>
+<%= @business.logo %><br>
+<%= @business.audio %>
+
+<br>
+<br>
+
+<%= link_to "Edit", edit_business_path(@business) %>
+<%= link_to "Delete", business_path(@business), method: :delete, data: { confirm: "Are you sure you would llike to delete this Business?"} %>
